@@ -42,20 +42,9 @@
 //                                                         ####
 //                                                          ##
 //
-//------------------------- Seting up shop (Lab #1, Week 3) -------------------------//
-
-// Declare variables with values for the following:
-// - the name of the horse at the stable
-// - the age of the horse
-// - whether the horse is inside or outside
-// - the cost to board the horse monthly
-// - the fee for a late payment (monthly rate + 20%)
-//
-// Create a variable and use it to store a message for visitors to the stable.
-// Create a variable and use it to store a message that monthly payment is late, and the amount owing.
-// Include the name of your horse in the message.
-
 //------------------------- First day (Lab #2, Week 4) -------------------------//
+
+
 
 // Using an object, add at least 3 horses to your stables.
 //
@@ -91,54 +80,43 @@ let latePaymentMessage =
 console.log(welcomeMessage);
 console.log(latePaymentMessage);
 
-let horseOneObj = {
-    name: "Pooh",
-    nickname: "Winnie",
-    favouriteTreat: "honey",
-    age: 6,
-    monthlyRent: 600,
-    isHorseInStable: false,
-    personality: "active",
-    weight: 10,
+let horses = {
+    Pooh: {
+        name: horseName,
+        nickname: "Winnie"
+        age: horseAge,
+        location: isHorseInStable,
+        treat: "honey",
+        rent: monthlyBoardingFee,
+        color: "Yellow"
+        style: "has a red top shirt",
+    },
+    Boog: {
+        name: "Boog",
+        nickname: "Boogie",
+        age: 4,
+        isHorseInStable: true,
+        treat: "fish",
+        rent: monthlyBoardingFee,
+        color: "green",
+        style: "has a round body",
+    },
+    // ...
 };
 
-let horseTwoObj = {
-    name: "Boog",
-    nickname: "Boogie",
-    favouriteTreat: "fish",
-    age: 4,
-    monthlyRent: 500,
-    isHorseInStable: true,
-    personality: "calm",
-    weight: 3,
-};
-
-let horseThreeObj = {
-    name: "Irene",
-    nickname: "Hyo",
-    favouriteTreat: "cake",
-    age: 20,
-    monthlyRent: 900,
-    isHorseInStable: true,
-    personality: "friendly",
-    weight: 50,
-};
-let horses = [horseOneObj, horseTwoObj, horseThreeObj];
-
-let horseFourObj = {
-    name: "Juu",
-    nickname: "Tom",
-    favouriteTreat: "icecream",
+let newHorse = {
+    name: "Hyo",
+    nickname: "Irene",
     age: 30,
-    monthlyRent: 1100,
     isHorseInStable: false,
-    personality: "lazy",
-    weight: 70,
+    treat: "cake"
+    rent: 1000,
+    color: "red",
+    style: "has long hair",
 };
-horses.push(horseFourObj);
-horseOneObj.isHorseHungry = true;
-horseTwoObj.isHorseHungry = false;
-horseThreeObj.isHorseHungry = false;
-horseFourObj.isHorseHungry = true;
 
-console.log(horses);
+horses.Hyo = newHorse;
+
+horses.Pooh.isHorseHungry = true;
+horses.Boog.isHorseInStable = false;
+horseAge.Hyo.isHorseHungry = true;
