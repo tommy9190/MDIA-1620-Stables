@@ -42,16 +42,6 @@
 //                                                         ####
 //                                                          ##
 //
-// This is a template for your labs and final project. You'll be setting up a stable and making
-// sure it runs smoothly.
-//
-// Please do not create a new file for each lab!
-// Feel free to keep the headings (e.g.: "Variables"), but please delete any boilerplate
-// comments. (Your own comments, where necessary, are acceptable.)
-//
-// NOTE: UNLESS SPECIFIED, VARIABLE NAMING IS UP TO YOU. THERE SHOULD BE NO HARD-CODED
-// NUMBERS OR STRINGS WHERE VARIBALES WOULD BE PREFERRED.
-
 //------------------------- Seting up shop (Lab #1, Week 3) -------------------------//
 
 // Declare variables with values for the following:
@@ -88,28 +78,17 @@ let horseName = "Pooh";
 let horseAge = 6;
 let isHorseInStable = false;
 let monthlyBoardingFee = 600;
-let feeForLatePayment = monthlyBoardingFee + monthlyBoardingFee * 0.2;
+let lateFee = monthlyBoardingFee * 0.2;
 
-let messageForVisitors =
-    "This horse is named " +
-    horseName +
-    " and his age is " +
-    horseAge +
-    "." +
-    " The monthly cost to board " +
-    horseName +
-    " is " +
-    monthlyBoardingFee +
-    " CAD.";
-
+let welcomeMessage = "Welcome to my stables!";
 let latePaymentMessage =
-    "Your monthly boarding payment for " +
+    "Your payment for " +
     horseName +
-    " is overdue, and your outstanding balance is " +
-    feeForLatePayment +
-    " CAD.";
+    " is late! You owe $" +
+    (monthlyBoardingFee + lateFee) +
+    ", or else!";
 
-console.log(messageForVisitors);
+console.log(welcomeMessage);
 console.log(latePaymentMessage);
 
 let horseOneObj = {
