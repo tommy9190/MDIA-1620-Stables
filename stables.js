@@ -128,3 +128,42 @@ horses.Pooh.isHorseHungry = true;
 horses.Boog.isHorseHungry = false;
 horses.Mak.isHorseHungry = false;
 horses.Hyo.isHorseHungry = true;
+
+//------------------------- Growing our business (Lab #2, Week 6) -------------------------//
+
+// Create a variable that stores your total number of stalls.
+// Create a function that logs out how many stalls are available, given how many horses you have in your stable.
+
+// Create a function that logs out how much will an individual horse will owe if rent is
+// paid late. Invoke the function.
+
+// Create and invoke a function that returns (not logs) the nickname of a chosen horse. Log out
+// the return value outside of the function.
+
+let totalNumberOfStalls = 10;
+function availableStalls(totalStalls, totalHorses) {
+    console.log(
+        "There are " + (totalStalls - totalHorses) + " stables available."
+    );
+}
+availableStalls(10, 4);
+
+function lateAmountByHorse(nameOfHorse) {
+    let rent = horses[nameOfHorse].rent;
+    let lateFee = rent * 0.2;
+    let totalAmount = rent + lateFee;
+    console.log("You owe me " + totalAmount + " if your rent is paid late.");
+}
+lateAmountByHorse("Pooh");
+lateAmountByHorse("Boog");
+lateAmountByHorse("Mak");
+lateAmountByHorse("Hyo");
+
+function getNickname(nameOfHorse) {
+    let nickname = horses[nameOfHorse].nickname;
+    return nickname;
+}
+console.log(getNickname("Pooh"));
+console.log(getNickname("Boog"));
+console.log(getNickname("Mak"));
+console.log(getNickname("Hyo"));
