@@ -44,8 +44,6 @@
 //
 //------------------------- First day (Lab #2, Week 4) -------------------------//
 
-
-
 // Using an object, add at least 3 horses to your stables.
 //
 // The horses should have the following properties:
@@ -83,12 +81,12 @@ console.log(latePaymentMessage);
 let horses = {
     Pooh: {
         name: horseName,
-        nickname: "Winnie"
+        nickname: "Winnie",
         age: horseAge,
         location: isHorseInStable,
         treat: "honey",
         rent: monthlyBoardingFee,
-        color: "Yellow"
+        color: "Yellow",
         style: "has a red top shirt",
     },
     Boog: {
@@ -97,11 +95,20 @@ let horses = {
         age: 4,
         isHorseInStable: true,
         treat: "fish",
-        rent: monthlyBoardingFee,
-        color: "green",
+        rent: 500,
+        color: "dark green",
         style: "has a round body",
     },
-    // ...
+    Mak: {
+        name: "Mak",
+        nickname: "Juu",
+        age: 30,
+        isHorseInStable: true,
+        treat: "icecream",
+        rent: 1200,
+        color: "light green",
+        style: "has black hair",
+    },
 };
 
 let newHorse = {
@@ -109,7 +116,7 @@ let newHorse = {
     nickname: "Irene",
     age: 30,
     isHorseInStable: false,
-    treat: "cake"
+    treat: "cake",
     rent: 1000,
     color: "red",
     style: "has long hair",
@@ -118,5 +125,6 @@ let newHorse = {
 horses.Hyo = newHorse;
 
 horses.Pooh.isHorseHungry = true;
-horses.Boog.isHorseInStable = false;
-horseAge.Hyo.isHorseHungry = true;
+horses.Boog.isHorseHungry = false;
+horses.Mak.isHorseHungry = false;
+horses.Hyo.isHorseHungry = true;
