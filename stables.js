@@ -61,31 +61,31 @@
 // Initialize new property to your horses: a boolean that allows you to check if your horse
 // is hungry or not. Use dot notation.
 
-let horseName = "Pooh";
-let horseAge = 6;
-let isHorseInStable = false;
-let monthlyBoardingFee = 600;
-let lateFee = monthlyBoardingFee * 0.2;
+// let horseName = "Pooh"; // This is a variable that has a string primitive
+// let horseAge = 6;
+// let isHorseInStable = false;
+// let monthlyBoardingFee = 600;
+// let lateFee = monthlyBoardingFee * 0.2;
 
-let welcomeMessage = "Welcome to my stables!";
-let latePaymentMessage =
-    "Your payment for " +
-    horseName +
-    " is late! You owe $" +
-    (monthlyBoardingFee + lateFee) +
-    ", or else!";
+// let welcomeMessage = "Welcome to my stables!";
+// let latePaymentMessage =
+//     "Your payment for " +
+//     horseName +
+//     " is late! You owe $" +
+//     (monthlyBoardingFee + lateFee) +
+//     ", or else!"; // concatenation, used + operator
 
-console.log(welcomeMessage);
-console.log(latePaymentMessage);
+// console.log(welcomeMessage);
+// console.log(latePaymentMessage);
 
 let horses = {
     Pooh: {
-        name: horseName,
-        nickname: "Winnie",
-        age: horseAge,
-        location: isHorseInStable,
+        name: "Pooh",
+        nickname: "Winnie", // key nickname, value "Winnie" and they form a property
+        age: 6,
+        isHorseInStable: false,
         treat: "honey",
-        rent: monthlyBoardingFee,
+        rent: 600,
         color: "Yellow",
         style: "has a red top shirt",
     },
@@ -124,7 +124,7 @@ let newHorse = {
 
 horses.Hyo = newHorse;
 
-horses.Pooh.isHorseHungry = true;
+horses.Pooh.isHorseHungry = true; // can also use horses["Pooh"]["isHorseHungry"] = true; for bracket notation
 horses.Boog.isHorseHungry = false;
 horses.Mak.isHorseHungry = false;
 horses.Hyo.isHorseHungry = true;
@@ -161,12 +161,13 @@ function latePaymentNotice(horse) {
     );
 }
 
-latePaymentNotice(horses.Pooh);
+latePaymentNotice(horses.Pooh); // this is a function call, and horses.Pooh is an argument, using the placeholder horse
 
 // Create and invoke a function that returns (not logs) the nickname of a chosen horse. Log out
 // the return value outside of the function.
 
 function gimmieThatNickname(horseName, horseNickname) {
+    // here I used parameters horseName and horseNickname
     return (
         "This is " +
         horseName +
@@ -174,9 +175,9 @@ function gimmieThatNickname(horseName, horseNickname) {
         horseNickname +
         "!"
     );
-}
+} // And a function body, return ("This is...!")
 
-console.log(gimmieThatNickname(horses.Pooh));
+console.log(gimmieThatNickname(horses.Pooh.name, horses.Pooh.nickname));
 
 // let totalNumberOfStalls = 10;
 // function availableStalls(totalStalls, totalHorses) {
